@@ -1,0 +1,65 @@
+mysql函数：
+	1.system_user() 系统用户名
+	2 user()：用户名
+	3current_user当前用户
+	4session_user()：连接数据库的用户名
+	5database()：数据库名
+	6version() ：版本
+	7load_file('c:/1.txt')：转成16进制或者是10进制mysql读取本地文件的函数
+	8@@datadir：读取数据库路径
+	9@@basedir：安装路径
+	10@@version_compile_os:操作系统
+mysql 数据库连接
+	<?php
+	$host='localhost'
+	$database=''
+	$user ='root'
+	$pass=‘’
+	$webml='/0/'
+	?>
+
+注入原理：解释性语言
+
+mysql版本>4.0
+	
+	4.0之前没有infomation_scahme表，所以不能手工注入，可以用sqlmap
+
+mysql 显错注入
+	admin'#    可以把后面的sql注释掉
+	admin ' or '1=1'#
+mysql读写函数
+	union select load_file(filePath)
+
+常见的提交方式：
+	GET:inurl:.asp?id=1
+	当有防注入代码时：
+	POST:data傳參（文件）
+		post提交方式主要是表單提交（登錄框的注入）
+		工具：
+		穿山甲 ：不是很好用post
+		sqlmap：sqlmap -u c:\p.txt      bp获取的数据包保存再p.txt中
+			
+	request：get/post 都接收
+	COOKIE ：cookie 欺騙 登錄-->先用bp抓包，在bp修改参数的位置
+		sqlmap：sqlmap.py -u "注入连接不带参数（get方式被拦截）" --cookie "id=24" --level 2
+	HEAD
+	PUT
+	OPTION
+
+搜索型注入：先用显错注入测试是否存在注入点
+
+伪静态注入：123.html --->123-0.html  返回正常则是伪静态
+	四种常见的伪静态构造方式
+
+延迟注入：（盲注手法）
+	通过页面返回的时间来判断
+	不同mysql版本延时注入语句也不同
+	mysql >=5.0 ---->sleep():http://192.168.1.200:8088/test.php?id=1 and sleep(5) 看效果是否满足5s之后显示
+	mysql<5.0------->benchmark()
+
+二阶注入
+	
+	
+	
+
+
