@@ -56,7 +56,15 @@ sqlmap：python编写的开源渗透测试工具，主要检测sql注入漏洞�
 伪静态：
 	
 
-
+批量检测站点
+	1通常用于某一类型漏洞站点的安全检测
+	判断数据库类型：	  
+	--->@@操作1：       access: link + and exsits(select * from msysobjects)>0 
+			mssql: link + and exsits(select * from sysobjects)>0 
+	
+	
+	sql注入扫描工具：穿山甲   sqlmap
+		--->@@操作1：sqlmap -u http://www.rayseasc.com/plugin.php?id=ruixi:index
 	
 	
 		

@@ -60,3 +60,5 @@ CSRF漏洞详解：还不如反射型XSS
 	AWVS
 	appscan		
 	
+SSRF(Server-side Request Forgery 服务器端请求伪造 )：
+	电脑--->连接内网交换机端口转发其中一台服务器，于是可以访问其服务器所有的资源
