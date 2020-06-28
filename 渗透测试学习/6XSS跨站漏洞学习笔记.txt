@@ -29,6 +29,8 @@ XSS漏洞发掘与绕过：闭合是为了不让js在标签内部，否则无法
 			实列：
 			<div value="123">---><div value="">123<script>alert(/xss/)</script>">
 			万能前缀：‘“></tr></td>
+
+				--->@@操作：http://www.xx.com/xss.php?id=1<script>alert(1)</script>看是否弹窗
 		工具：
 			AWVS
 			netsparke
@@ -43,6 +45,12 @@ XSS漏洞发掘与绕过：闭合是为了不让js在标签内部，否则无法
 		payload-->XSSpayload持久到web服务器，当管理员登录后访问该页面时-->获取cookie到XSS平台-->cookie马-->
 		强制修改cookie-->访问登录后的页面（类似session失效询问）-->-->-->-->
 		存在XSS点：个人资料中可能存在
+
+				--->@@操作：注册登录-->默认模块+keepsession-->拿到获取管理员cookie的
+		payload-->XSSpayload持久到web服务器，当管理员登录后访问该页面时-->获取cookie到XSS平台-->cookie马-->
+		强制修改cookie-->访问登录后的页面（类似session失效询问）
+
+
 		http-only启用后，无法获取cookie之后：XSS钓鱼
 		1保存admin登录页面-->-->-->-->-->-->-->-->-->-->https://www.mrwu.red/biji/3047.html
 ·		2如果有二级密码则记录键盘
