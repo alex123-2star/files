@@ -5,7 +5,7 @@
 		edu.baidu.com 安全级别比较低（谷歌语法，layer软件，subDomainsBrute（节省资源））
 
 			--->@@操作0：目标站：www.wids.edu.cn   /http://113.57.227.3/jiaowu/Login.aspx
-			--->@@操作1：site:wids.edu.cn    / Layer工具枚举baopo/subDomainBruit 解压到py27中先dns install 再
+			--->@@操作1：site:wids.edu.cn    / Layer工具枚举爆破/subDomainBruit 解压到py27中先dns install 再
 				subDomainsBrute.py wids.edu.cn
 			--->@@操作2：whois/站长工具/爱站网/微步在线
 	
@@ -64,7 +64,7 @@
 			--->@@操作1:看是否有readme.txt看是否使用了CMS
 ··			--->@@操作2:云溪资产查询资产
 
-	在线工具：www.yunsee.cn  (web指纹识别)
+	在线工具：https://scan.top15.cn/web/ (web指纹识别)
 
 谷歌hacker
 	1intext：管理员登陆  查找'网页中'含有该关键字的网站（可以通过一句话查找被插一句话的网站）
